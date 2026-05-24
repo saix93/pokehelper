@@ -32,7 +32,8 @@ const templates = {
             &nbsp;|&nbsp;
             <span id="sh-state">Running</span>
             </div>
-            <button id="sh-type-toggle">🧠 Types</button>
+        
+            <button id="sh-type-toggle">Types</button>
         </div>
     `,
 

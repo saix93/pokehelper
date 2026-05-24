@@ -92,7 +92,7 @@ const TypeChecker = (() => {
         const fmt = (type) =>
             type
                 ? `<div class="tc-slot-icon">
-                        <img src="${PokeAPI.TYPE_ICON_CACHE[type]}" />
+                        <img src="${TYPE_ICON_CACHE[type]}" />
                    </div>`
                 : "—";
 
@@ -130,8 +130,8 @@ const TypeChecker = (() => {
                 ${PokeAPI.ALL_TYPES.map(type => `
                     <div class="tc-type-tile ${selectedTypes.includes(type) ? "tc-type-selected" : ""}"
                         data-type="${type}"
-                        style="background:${PokeAPI.TYPE_COLORS[type]};">
-                        <img class="tc-type-icon" src="${PokeAPI.TYPE_ICON_CACHE[type] || ""}" alt="${type}" />
+                        style="background:${TYPE_COLORS[type]};">
+                        <img class="tc-type-icon" src="${TYPE_ICON_CACHE[type] || ""}" alt="${type}" />
                     </div>
                 `).join("")}
             </div>

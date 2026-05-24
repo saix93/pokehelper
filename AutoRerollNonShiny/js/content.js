@@ -280,11 +280,20 @@
            const typeToggle = ui.panel.querySelector("#sh-type-toggle");
 
             typeToggle.addEventListener("click", () => {
-        
             const typePanel = document.getElementById("tc-panel");
             if (typePanel) {
+                // Check current display state
                 const isHidden = typePanel.style.display === "none";
-                typePanel.style.display = isHidden ? "flex" : "none";
+                
+                if (isHidden) {
+                    // Show the panel
+                    typePanel.style.display = "block";  // Use "block", not "flex"
+                    // Reposition it below Shiny Helper
+                    positionTypeChecker();
+                } else {
+                    // Hide the panel
+                    typePanel.style.display = "none";
+                }
             }
         });
         },
